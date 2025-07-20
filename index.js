@@ -276,7 +276,7 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('User', userSchema);`,
-            'src/config/database.js': (projectName) => `const mongoose = require('mongoose');
+            'src/config/dbConfig.js': (projectName) => `const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
