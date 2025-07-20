@@ -45,7 +45,6 @@ const templates = {
             'src/routes',
             'src/middleware',
             'src/utils',
-            'src/config'
         ],
         files: {
             'src/server.js': `const express = require('express');
@@ -118,20 +117,16 @@ exports.createUser = (req, res) => {
     users.push(newUser);
     res.status(201).json(newUser);
 };`,
-            'src/config/index.js': `require('dotenv').config();
 
-module.exports = {
-    PORT: process.env.PORT || 3000,
-    NODE_ENV: process.env.NODE_ENV || 'development'
-};`,
-            '.env': `NODE_ENV=development
+'.env': `NODE_ENV=development
 PORT=3000`,
             '.gitignore': `node_modules/
 .env.local
 .env.production
 .DS_Store
 *.log`,
-            'package.json': (projectName) => `{
+    
+'package.json': (projectName) => `{
     "name": "${projectName}",
     "version": "1.0.0",
     "description": "Node.js backend application",
