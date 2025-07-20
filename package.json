@@ -1,0 +1,40 @@
+{
+  "name": "node-backend-generator",
+  "version": "1.0.0",
+  "description": "A customizable CLI tool for generating professional Node.js backend folder structures",
+  "main": "index.js",
+  "bin": {
+    "node-backend-gen": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "link": "npm link",
+    "unlink": "npm unlink"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "cli",
+    "generator",
+    "scaffold",
+    "boilerplate"
+  ],
+  "author": "Athul Sabu",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "inquirer": "^8.2.6"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/node-backend-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/node-backend-generator/issues"
+  },
+  "homepage": "https://github.com/yourusername/node-backend-generator#readme"
+}
