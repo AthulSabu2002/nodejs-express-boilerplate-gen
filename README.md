@@ -1,4 +1,4 @@
-# Node Backend Generator
+# Nodejs-Expressjs-Boilerplate-Generator
 
 A command-line tool to quickly scaffold professional Node.js backend applications with different templates.
 
