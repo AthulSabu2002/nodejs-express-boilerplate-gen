@@ -151,11 +151,13 @@ dist/
     "scripts": {
         "build": "tsc",
         "start": "node dist/server.js",
-        "dev": "ts-node-dev --respawn src/server.ts",
+        "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+        "dev:nodemon": "npx nodemon --exec npx ts-node src/server.ts",
         "postinstall": "npm run build"
     },
     "dependencies": {
         "express": "^4.18.2",
+        "mongoose": "^8.0.0",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1"
     },
@@ -163,9 +165,8 @@ dist/
         "@types/cors": "^2.8.15",
         "@types/express": "^4.17.20",
         "@types/node": "^20.8.9",
-        "ts-node": "^10.9.1",
         "ts-node-dev": "^2.0.0",
-        "typescript": "^5.2.2",
+        "typescript": "^5.8.3",
         "nodemon": "^3.0.1"
     }
 }`,

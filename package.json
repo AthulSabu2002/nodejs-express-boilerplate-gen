@@ -1,10 +1,10 @@
 {
-  "name": "node-backend-generator",
+  "name": "create-node-api",
   "version": "1.0.0",
-  "description": "A customizable CLI tool for generating professional Node.js backend folder structures",
+  "description": "A customizable CLI tool for generating professional Node.js backend applications",
   "main": "index.js",
   "bin": {
-    "node-backend-gen": "./index.js"
+    "create-node-api": "./index.js"
   },
   "scripts": {
     "start": "node index.js",
@@ -17,7 +17,10 @@
     "cli",
     "generator",
     "scaffold",
-    "boilerplate"
+    "boilerplate",
+    "create",
+    "starter",
+    "node"
   ],
   "author": "Athul Sabu",
   "license": "MIT",
@@ -31,10 +34,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/node-backend-generator.git"
+    "url": "https://github.com/AthulSabu2002/nodejs-express-boilerplate-gen.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/node-backend-generator/issues"
+    "url": "hhttps://github.com/AthulSabu2002/nodejs-express-boilerplate-gen/issues"
   },
-  "homepage": "https://github.com/yourusername/node-backend-generator#readme"
+  "homepage": "https://github.com/AthulSabu2002/nodejs-express-boilerplate-gen"
 }
