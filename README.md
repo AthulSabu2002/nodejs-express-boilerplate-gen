@@ -4,32 +4,29 @@ A command-line tool to quickly scaffold professional Node.js backend application
 
 ## Installation
 
-### Global Installation (Recommended)
+This tool is designed to be used locally after cloning and customizing to your needs.
 
 ```bash
-npm install -g node-backend-generator
+# Clone the repository
+git clone <repository-url> node-backend-generator
+cd node-backend-generator
+
+# Install dependencies
+npm install
+
+# Link the package locally
+npm link
 ```
 
-This makes the `node-backend-gen` command available globally on your system.
-
-### Local Installation
-
-```bash
-npm install node-backend-generator
-```
-
-When installed locally, you'll need to use `npx` to run the commands.
+This makes the `node-backend-gen` command available on your system.
 
 ## Usage
 
 ### Create a new project
 
 ```bash
-# Using global installation
-node-backend-gen create my-project
-
-# Using npx with local installation
-npx node-backend-generator create my-project
+# After linking the package
+create-node-api create my-project
 ```
 
 The tool will guide you through an interactive process to select a template and configure your project.
@@ -39,36 +36,49 @@ The tool will guide you through an interactive process to select a template and 
 You can list all available templates with:
 
 ```bash
-node-backend-gen list-templates
+create-node-api list-templates
 ```
 
 Currently supported templates:
 
-- **basic** - Basic REST API with Express.js
+- **basic** - Basic REST API with Express.js (JavaScript)
 
   - Minimal setup with Express.js
   - Ready-to-use CRUD API example
   - Environment configuration
   - Proper project structure
 
-- **express** - Express with MongoDB integration
+- **express** - Express with MongoDB integration (JavaScript)
+
   - Express.js framework
   - MongoDB database connection
   - Mongoose ODM
   - Model-Controller architecture
   - Ready-to-use CRUD API example
 
+- **basic-ts** - TypeScript version of Basic REST API
+
+  - TypeScript configuration
+  - Type-safe Express.js setup
+  - All features of basic template with type safety
+
+- **express-ts** - TypeScript version of Express with MongoDB
+  - TypeScript configuration
+  - Type-safe Express.js and MongoDB integration
+  - Interface definitions for models
+  - All features of express template with type safety
+
 ### Command Options
 
 #### Create Command
 
 ```bash
-node-backend-gen create <project-name> [options]
+create-node-api create <project-name> [options]
 ```
 
 Options:
 
-- `-t, --template <template>` - Specify which template to use (basic, express)
+- `-t, --template <template>` - Specify which template to use (basic, express, basic-ts, express-ts)
 - `-y, --yes` - Skip interactive prompts and use default options (no Docker)
 - `-h, --help` - Display help information
 
@@ -76,18 +86,19 @@ Examples:
 
 ```bash
 # Create a project with the basic template
-node-backend-gen create my-api --template basic
+create-node-api create my-api --template basic
 
-# Create a project with express template, skipping prompts
-node-backend-gen create my-mongo-api --template express -y
+# Create a project with express TypeScript template
+create-node-api create my-mongo-api --template tsexpress
 
 # Create a project and follow the interactive prompts
-node-backend-gen create my-project
+create-node-api create my-project
 ```
 
 ## Features
 
 - **Multiple project templates** - Choose the right template for your needs
+- **JavaScript and TypeScript support** - Use either language based on your preference
 - **Interactive CLI** - Guided setup with prompts for project configuration
 - **Optional Docker support** - Include Docker and docker-compose configuration if needed
 - **Structured project architecture** - Professional folder organization following best practices
@@ -96,7 +107,7 @@ node-backend-gen create my-project
 
 ## Project Structure
 
-### Basic Template
+### Basic Template (JavaScript/TypeScript)
 
 ```
 my-api/
@@ -113,7 +124,7 @@ my-api/
 └── README.md
 ```
 
-### Express Template
+### Express Template (JavaScript/TypeScript)
 
 ```
 my-mongo-api/
