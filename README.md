@@ -18,7 +18,7 @@ npm install
 npm link
 ```
 
-This makes the `node-backend-gen` command available on your system.
+This makes the `create-node-api` command available on your system.
 
 ## Usage
 
